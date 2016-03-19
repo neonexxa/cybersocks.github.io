@@ -1,0 +1,37 @@
+<div id="navbar" class="nav-down">
+  <div class="navbar navbar-default navbar-static">
+    <div class="container">
+      <div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ "/"  | prepend: site.url }}">{{ site.title }}</a>
+      </div>
+      <div class="navbar-collapse collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href="{{ site.url }}">HOME</a></li>
+          <li {% if page.title == "About" %}class="active"{% endif %}><a href="{{"/about/" | prepend: site.url }}">ABOUT</a></li>
+          <li {% if page.title == "Contact" %}class="active"{% endif %}><a href="{{"/contact/" | prepend: site.url }}">CONTACT</a></li>
+          <li class="dropdown">
+            <a href="/files/" data-toggle="dropdown">RESOURCES</a>
+            <ul class="dropdown-menu">
+              <li><a href="/files">Rules</a></li>
+              <li><a href="/lala">Programme</a></li>
+              <li><a href="/haha">Committee</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="/home/" data-toggle="dropdown">REGIONAL</a>
+            <ul class="dropdown-menu">
+              {% for country in site.data.country %}
+              <li><a href="{{ "/" | prepend: site.url }}{{ country.name }}">{{ country.name }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
