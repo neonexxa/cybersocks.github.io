@@ -15,18 +15,18 @@
           <li {% if page.title == "About" %}class="active"{% endif %}><a href="{{"/about/" | prepend: site.url }}">ABOUT</a></li>
           <li {% if page.title == "Contact" %}class="active"{% endif %}><a href="{{"/contact/" | prepend: site.url }}">CONTACT</a></li>
           <li class="dropdown">
-            <a href="/files/" data-toggle="dropdown">RESOURCES</a>
+            <a data-toggle="dropdown">RESOURCES</a>
             <ul class="dropdown-menu">
-              <li><a href="/files">Rules</a></li>
-              <li><a href="/lala">Programme</a></li>
-              <li><a href="/haha">Committee</a></li>
+              <li><a href="#">Rules</a></li>
+              <li><a href="#">Programme</a></li>
+              <li><a href="#">Committee</a></li>
             </ul>
           </li>
           <li class="dropdown">
-            <a href="/home/" data-toggle="dropdown">REGIONAL</a>
+            <a data-toggle="dropdown">REGIONAL</a>
             <ul class="dropdown-menu">
               {% for country in site.data.country %}
-              <li><a href="{{ "/" | prepend: site.url }}{{ country.name }}">{{ country.name }}</a></li>
+              <li><a href="{{ "/" | prepend: site.url }}{{ country.link }}">{{ country.name }}</a></li>
               {% endfor %}
             </ul>
           </li>
