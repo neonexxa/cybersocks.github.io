@@ -5,7 +5,7 @@ layout: default
 <div class="container">
 	<header id="header">
 		<h1>CyberSOCKS</h1>
-		<p>Cybersocks Regional Competition 2016</p>
+		<h2>Cybersocks Regional Competition 2016</h2>
 	</header>
 </div>
 
@@ -38,7 +38,7 @@ layout: default
 				<h3>Made possible by</h3>
 			{% for sponsor in site.data.sponsor %}
 			<div class="col-xs-6 col-md-3">
-				<img src="{{ sponsor.base }}" class="focus" />
+				<img class="focus" src="{{ sponsor.base }}" alt="{{ sponsor.name }}" />
 			</div>
 			{% endfor %}
 		</div>

@@ -1,12 +1,5 @@
 /*- Base reset -*/
 
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-      -ms-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, img {
   margin: 0;
   padding: 0;
@@ -18,9 +11,9 @@ html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, img {
 $main-color: #384452; // light black - dark grey
 $secondary-color: #01b2fe; // light blue
 $background-color: #e3e3e3; // silver-ish or can use this bfc9d3
-$text-color: #fff; // white
+$text-color: #fff; // white, obviously
 $link-color: #428bca; // light blue - well, pretty dark compared to secondary-color
-$black-color: #000;
+$black-color: #000; // obviously black
 
 /*- Base settings -*/
 
