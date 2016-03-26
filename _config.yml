@@ -2,8 +2,7 @@
 title: CYBERSOCKS
 description: "Cybersocks Regional Competition 2016"
 url: "https://cybersocks.org"
-admin:
-  email: "admin@cybersocks.org"
+admin: "admin@cybersocks.org"
 
 # Build settings
 baseurl: "/"
