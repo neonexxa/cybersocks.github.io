@@ -21,8 +21,37 @@
   margin-top: 0px;
   padding-top: 80px;
   padding-bottom: 100px;
+  text-align: center;
   h3 {
     margin-bottom: 60px;
+  }
+}
+
+#twrap {
+  background: url(http://www.provirtual.ca/images/networksec.jpg) no-repeat center top;
+  position: relative;
+  min-height: 200px;
+}
+
+#twrapcover {
+  background-color: rgba($secondary-color, .75);
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  h3 {
+    padding-top: 50px;
+    color: $text-color;
+  }
+  li {
+    display: inline;
+    font-weight: bold;
+    a {
+      color: $black-color;
+      &:hover {
+        color: $text-color;
+      }
+    }
   }
 }
 
@@ -106,7 +135,7 @@ nav {
 /* Img Focus Zoom */
 
 .focus {
-  margin: 10px 10px 10px 10px;
+  margin: 10px;
   @include prefix((
     transform: scale(1, 1),
     transition-duration: 0.3s
@@ -119,4 +148,10 @@ nav {
       transition-duration: 0.3s
     ));
   }
+}
+
+/* resource temporary accordion */
+.panel-heading {
+    cursor: pointer;
+    padding: 20px;
 }

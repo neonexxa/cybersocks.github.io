@@ -13,14 +13,14 @@
       <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
           <li><a href="{{ site.url }}">HOME</a></li>
-          <li {% if page.title == "About" %}class="active"{% endif %}><a href="{{"/about/" | prepend: site.url }}">ABOUT</a></li>
-          <li {% if page.title == "Contact" %}class="active"{% endif %}><a href="{{"/contact/" | prepend: site.url }}">CONTACT</a></li>
+          <li><a href="{{"/about" | prepend: site.url }}">ABOUT</a></li>
+          <li><a href="{{"/contact" | prepend: site.url }}">CONTACT</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">RESOURCES</a>
             <ul class="dropdown-menu">
-              <li><a href="#">Rules</a></li>
-              <li><a href="#">Programme</a></li>
-              <li><a href="#">Committee</a></li>
+              {% for resource in site.data.resource %}
+              <li><a href="{{ "/resources" | prepend: site.url }}#{{ resource.id }}">{{ resource.title }}</a></li>
+              {% endfor %}
             </ul>
           </li>
           <li class="dropdown">

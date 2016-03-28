@@ -5,11 +5,23 @@ layout: default
 <div class="container">
 	<header id="header">
 		<h1>CyberSOCKS</h1>
-		<h2>Cybersocks Regional Competition 2016</h2>
+		<h2>CyberSOCKS Regional Competition 2016</h2>
 	</header>
 </div>
 
-<!-- Regional Country -->
+<!-- Regional Country list-->
+<div id="twrap">
+	<div id="twrapcover">
+		<h3 id="typing">CyberSOCKS Regional Qualification Rounds</h3>
+		<p>
+			{% for country in site.data.country %}
+			<li>{% if country.name != "Malaysia" %}&bull;{% endif %}<a href="{{ country.link }}">&nbsp;&nbsp;{{ country.name }}&nbsp;</a></li>
+			{% endfor %}
+		</p>
+	</div>
+</div>
+
+<!-- Regional Country hexagon-->
 <div id="hex-bg">
 	<div class="container">
 		<ul id="hexagon" class="clr">
@@ -22,7 +34,7 @@ layout: default
 					<img src="{{ "/img/hexagon/" | prepend: site.url }}{{ country.code }}.svg" alt="{{ country.name }}"/>
 					<h1>{{ country.name }}</h1>
 					<p>
-						<a id="register" href="{{ country.link }}">REGISTER NOW</a>
+						<a id="register" href="{{ country.link }}">More Info</a>
 					</p>
 				</div>
 			</li>
@@ -35,7 +47,7 @@ layout: default
 <div id="swrap">
 	<div class="container">
 		<div class="row">
-				<h3>Made possible by</h3>
+			<h3>CyberSOCKS is brought to you by</h3>
 			{% for sponsor in site.data.sponsor %}
 			<div class="col-xs-6 col-md-3">
 				<img class="focus" src="{{ sponsor.base }}" alt="{{ sponsor.name }}" />

@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel-group" id="accordion">
+				{% for resource in site.data.resource %}
+				<div class="panel panel-default" id="{{ resource.id }}">
+					<div class="panel-heading" data-toggle="collapse" data-parent="#{{ resource.id }}" data-target="#{{ resource.title }}">
+						<h4 class="panel-title">
+							<a class="accordion-toggle">
+								{{ resource.title }}
+							</a>
+						</h4>
+					</div>
+					<div id="{{ resource.title }}" class="panel-collapse collapse">
+						<div class="panel-body">
+							{% include {{ resource.id }}.html %}
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
