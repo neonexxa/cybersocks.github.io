@@ -21,28 +21,6 @@ layout: default
 	</div>
 </div>
 
-<!-- Regional Country hexagon-->
-<div id="hex-bg">
-	<div class="container">
-		<ul id="hexagon" class="clr">
-			{% for country in site.data.country %}
-			{% if country.code == 'hk' or country.code == 'ph' %}
-			<li class="pusher"></li>
-			{% endif %}
-			<li>
-				<div>
-					<img src="{{ "/img/hexagon/" | prepend: site.url }}{{ country.code }}.svg" alt="{{ country.name }}"/>
-					<h1>{{ country.name }}</h1>
-					<p>
-						<a id="register" href="{{ country.link }}">More Info</a>
-					</p>
-				</div>
-			</li>
-			{% endfor %}
-		</ul>
-	</div>
-</div>
-
 <!-- Main Sponsors -->
 <div id="swrap">
 	<div class="container">
@@ -50,7 +28,7 @@ layout: default
 			<h3>CyberSOCKS is brought to you by</h3>
 			{% for sponsor in site.data.sponsor %}
 			<div class="col-xs-6 col-md-3">
-				<img class="focus" src="{{ sponsor.base }}" alt="{{ sponsor.name }}" />
+				<a href="{{ sponsor.site }}" target="blank"><img class="focus" src="{{ sponsor.base }}" alt="{{ sponsor.name }}" /></a>
 			</div>
 			{% endfor %}
 		</div>

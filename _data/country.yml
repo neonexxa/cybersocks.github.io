@@ -5,12 +5,6 @@
 - name: Singapore
   link: singapore
   code: sg
-- name: Hong Kong
-  link: hong-kong
-  code: hk
-- name: Indonesia
-  link: indonesia
-  code: id
 - name: Vietnam
   link: vietnam
   code: vn
