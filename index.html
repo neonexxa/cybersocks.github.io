@@ -2,11 +2,13 @@
 layout: default
 ---
 <!-- Header -->
-<div class="container">
-	<header id="header">
-		<h1>CyberSOCKS</h1>
-		<h2>CyberSOCKS Regional Competition 2016</h2>
-	</header>
+<div class="blue-grey lighten-5">
+	<div class="container">
+		<div class="section flow-text center-align">
+			<h1>CyberSOCKS</h1>
+			<h4>CyberSOCKS Competition 2016</h4>
+		</div>
+	</div>
 </div>
 
 <!-- Regional Country list-->
@@ -18,19 +20,20 @@ layout: default
 			<li>{% if country.name != "Malaysia" %}&bull;{% endif %}<a href="{{ country.link }}">&nbsp;&nbsp;{{ country.name }}&nbsp;</a></li>
 			{% endfor %}
 		</p>
+		<p>
+			Coming Soon!
+		</p>
 	</div>
 </div>
 
 <!-- Main Sponsors -->
-<div id="swrap">
-	<div class="container">
-		<div class="row">
-			<h3>CyberSOCKS is brought to you by</h3>
-			{% for sponsor in site.data.sponsor %}
-			<div class="col-xs-6 col-md-3">
-				<a href="{{ sponsor.site }}" target="blank"><img class="focus" src="{{ sponsor.base }}" alt="{{ sponsor.name }}" /></a>
-			</div>
-			{% endfor %}
+	<div class="center-align">
+			<div class="row">
+				<h4>CyberSOCKS is brought to you by</h4>
+				{% for sponsor in site.data.sponsor %}
+				<div class="col s6 m3">
+					<a href="{{ sponsor.site }}" target="blank"><img class="focus" src="{{ sponsor.base }}" alt="{{ sponsor.name }}" /></a>
+				</div>
+				{% endfor %}
 		</div>
 	</div>
-</div>

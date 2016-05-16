@@ -1,11 +1,3 @@
-/*- Base reset -*/
-
-html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, img {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
 /*- Base color -*/
 
 $main-color: #384452; // light black - dark grey
@@ -15,26 +7,14 @@ $text-color: #fff; // white, obviously
 $link-color: #428bca; // light blue - well, pretty dark compared to secondary-color
 $black-color: #000; // obviously black
 
-/*- Base settings -*/
+/* flexbox */
 
-html {
-	background-color: $background-color;
-	font-size: 16px;
-	@media (min-width: 940px) {
-		font-size: 18px;
-	}
-	line-height: 1.5;
-	color: $text-color;
+.page-flexbox-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-/*- Link -*/
-
-a {
-	color: $link-color;
-	text-decoration: none;
-	font-weight: 700;
-	&:hover, &:focus {
-		color: darken($link-color, 5%);
-    text-decoration: none;
-	}
+main {
+  flex: 1 0 auto;
 }
