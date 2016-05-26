@@ -5,15 +5,17 @@ url: "https://cybersocks.org"
 admin: "admin@cybersocks.org"
 
 # Build settings
-baseurl: "/"
 markdown: kramdown
-source: .
 permalink: /:title
 
 # Custom variables
-version: "1.5"
+version: "2.0"
 timezone: Asia/Kuala_Lumpur
-sass:
-  style: compressed
 kramdown:
   input: GFM
+
+# Compression
+compress_html:
+  clippings: all
+sass:
+  style: compressed

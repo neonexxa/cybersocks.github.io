@@ -1,10 +1,11 @@
 ---
 layout: default
+permalink: /
 ---
 <!-- Header -->
 <div class="blue-grey lighten-5">
 	<div class="container">
-		<div class="section flow-text center-align">
+		<div class="section flow-text center">
 			<h1>CyberSOCKS</h1>
 			<h4>CyberSOCKS Competition 2016</h4>
 		</div>
@@ -15,25 +16,22 @@ layout: default
 <div id="twrap">
 	<div id="twrapcover">
 		<h3 id="typing">CyberSOCKS Regional Qualification Rounds</h3>
-		<p>
-			{% for country in site.data.country %}
-			<li>{% if country.name != "Malaysia" %}&bull;{% endif %}<a href="{{ country.link }}">&nbsp;&nbsp;{{ country.name }}&nbsp;</a></li>
-			{% endfor %}
-		</p>
-		<p>
-			Coming Soon!
-		</p>
+		{% for country in site.data.country %}
+		<li>{% if country.name != "Malaysia" %}&bull;{% endif %}<a href="{{ country.link }}">&nbsp;&nbsp;{{ country.name }}&nbsp;</a></li>
+		{% endfor %}
 	</div>
 </div>
 
 <!-- Main Sponsors -->
-	<div class="center-align">
-			<div class="row">
-				<h4>CyberSOCKS is brought to you by</h4>
-				{% for sponsor in site.data.sponsor %}
-				<div class="col s6 m3">
-					<a href="{{ sponsor.site }}" target="blank"><img class="focus" src="{{ sponsor.base }}" alt="{{ sponsor.name }}" /></a>
-				</div>
-				{% endfor %}
+<div class="section center">
+	<div class="row">
+		<h5>CyberSOCKS is brought to you by</h5>
+		{% for sponsor in site.data.sponsors %}
+		<div class="col s6 m3">
+			<div class="card-panel hoverable grey lighten-5">
+				<a href="{{ sponsor.url }}" target="blank"><img class="responsive-img focus" src="{{ sponsor.base }}" alt="{{ sponsor.name }}" /></a>
+			</div>
 		</div>
+		{% endfor %}
 	</div>
+</div>

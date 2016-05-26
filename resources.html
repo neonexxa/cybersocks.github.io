@@ -1,17 +1,20 @@
 ---
 layout: default
 title: RESOURCES
-permalink: /resources
+permalink: /resources/
 ---
-<div class="row">
-    <div class="col s12">
-      <ul class="tabs">
-				{% for resource in site.data.resource %}
-        <li class="tab col s3"><a href="#{{ resource.id }}">{{ resource.title }}</a></li>
-				{% endfor %}
-      </ul>
-    </div>
-		{% for resource in site.data.resource %}
-    <div id="{{ resource.id }}" class="col s12">{% include {{ resource.id }}.html %}</div>
-		{% endfor %}
+{% include wrap.html %}
+<div class="section row">
+  <!-- tabs -->
+  <div class="col s12">
+    <ul class="tabs">
+      {% for tab in site.data.resources %}
+      <li class="tab col s3"><a class="black-text" href="#{{ tab.id }}">{{ tab.name }}</a></li>
+      {% endfor %}
+    </ul>
   </div>
+  <!-- content -->
+  {% for res in site.data.resources %}
+  <div id="{{ res.id }}" class="col s12">{% include res_{{ res.id }}.html %}</div>
+  {% endfor %}
+</div>

@@ -1,18 +1,19 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-<body>
+<body class="page-flexbox-wrapper">
 	<!-- Navigation -->
 	{% include navbar.html %}
-	<div class="page-flexbox-wrapper">
-		<!-- Main content -->
-		<main>
-			{{ content }}
-		</main>
-		<!-- Footer -->
-		{% include footer.html %}
-		<!-- Script -->
-		{% include script.html %}
-	</div>
+	<!-- Main content -->
+	<main>
+		{{ content }}
+	</main>
+	<!-- Footer -->
+	{% include footer.html %}
+	<!-- Script -->
+	{% include script.html %}
 </body>
 </html>
