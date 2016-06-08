@@ -1,5 +1,5 @@
 # Site settings
-title: CYBERSOCKS
+title: CyberSOCKS
 description: "Cybersocks Regional Competition 2016"
 url: "https://cybersocks.org"
 admin: "admin@cybersocks.org"
@@ -9,13 +9,22 @@ markdown: kramdown
 permalink: /:title
 
 # Custom variables
-version: "2.0"
+version: "2.1"
 timezone: Asia/Kuala_Lumpur
 kramdown:
   input: GFM
+gems:
+  - jekyll-sitemap
 
 # Compression
 compress_html:
   clippings: all
 sass:
   style: compressed
+
+# Data
+date:
+  quals: 21st – 22nd October 2016
+  regional: 9th and 10th December 2016
+link:
+  utphax: https://utphax.cyberhax.club/

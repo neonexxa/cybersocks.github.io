@@ -10,20 +10,18 @@
 #twrap {
   background: url(https://utphax.cyberhax.club/assets/img/t-back.jpg) no-repeat center top;
   position: relative;
-  min-height: 200px;
+  min-height: 240px;
   width: 100%;
   @include prefix((background-size: 100%));
   @include prefix((background-size: cover));
 }
 
 #twrapcover {
-  background-color: rgba($secondary-color, .75);
+  background-color: rgba($secondary-color, .65);
   position: absolute;
-  text-align: center;
   width: 100%;
   height: 100%;
-  h3 {
-    padding-top: 30px;
+  h4 {
     color: $text-color;
   }
   li {

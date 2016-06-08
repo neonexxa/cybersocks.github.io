@@ -2,36 +2,43 @@
 layout: default
 permalink: /
 ---
-<!-- Header -->
+
 <div class="blue-grey lighten-5">
-	<div class="container">
-		<div class="section flow-text center">
-			<h1>CyberSOCKS</h1>
-			<h4>CyberSOCKS Competition 2016</h4>
+	<!-- Header -->
+	<div class="container section row center">
+		<div class="col s12 m4 offset-m4">
+			<img src="/assets/img/cybersocks_transparent.png" alt="CyberSOCKS" class="responsive-img center" />
+			<hr>
+		</div>
+		<div class="col s12 center flow-text">
+			<h3>CyberSOCKS Regional</h3>
+			<h6>{% include location.html %}&nbsp;&nbsp;Kuala Lumpur, Malaysia on {{ site.date.regional }}</h6>
 		</div>
 	</div>
-</div>
-
-<!-- Regional Country list-->
-<div id="twrap">
-	<div id="twrapcover">
-		<h3 id="typing">CyberSOCKS Regional Qualification Rounds</h3>
-		{% for country in site.data.country %}
-		<li>{% if country.name != "Malaysia" %}&bull;{% endif %}<a href="{{ country.link }}">&nbsp;&nbsp;{{ country.name }}&nbsp;</a></li>
-		{% endfor %}
+	<!-- Regional Country list-->
+	<div id="twrap">
+		<div id="twrapcover">
+			<div class="container section row center">
+				<h4 id="typing">CyberSOCKS Regional Qualification Rounds</h4>
+				<div class="col s12">
+					{% for country in site.data.country %}
+					<li>{% if country.name != "Malaysia" %}&bull;{% endif %}<a href="{{ country.link }}">&nbsp;&nbsp;{{ country.name }}&nbsp;</a></li>
+					{% endfor %}
+					<p>{{ site.date.quals }}</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
 <!-- Main Sponsors -->
-<div class="section center">
-	<div class="row">
-		<h5>CyberSOCKS is brought to you by</h5>
-		{% for sponsor in site.data.sponsors %}
-		<div class="col s6 m3">
-			<div class="card-panel hoverable grey lighten-5">
-				<a href="{{ sponsor.url }}" target="blank"><img class="responsive-img focus" src="{{ sponsor.base }}" alt="{{ sponsor.name }}" /></a>
-			</div>
+<div class="section center row">
+	<h5>CyberSOCKS is brought to you by</h5>
+	{% for sponsor in site.data.sponsors %}
+	<div class="col s6 m3">
+		<div class="card-panel hoverable grey lighten-5">
+			<a href="{{ sponsor.url }}" target="blank"><img class="responsive-img focus" src="{{ sponsor.base }}" alt="{{ sponsor.name }}" /></a>
 		</div>
-		{% endfor %}
 	</div>
+	{% endfor %}
 </div>

@@ -1,12 +1,15 @@
 <footer class="page-footer blue-grey darken-3">
   <div class="container row">
-    <div class="col s12">
-      <h5 class="white-text">CyberSOCKS</h5>
-      <p class="grey-text text-lighten-4">Regional Asia Competition</p>
+    <div class="col s12 hide-on-med-and-up">
+      <h5 class="white-text">{{ site.title }}</h5>
+      <p class="grey-text text-lighten-4">{{ site.description }}</p>
+    </div>
+    <div class="col s3 hide-on-small-only">
+      <img src="/assets/img/cybersocks_transparent.png" alt="CyberSOCKS" class="responsive-img center" />
     </div>
   </div>
   <div class="footer-copyright container ">
-    &copy; CyberSOCKS 2016
-    <a class="grey-text text-lighten-4 right" href="https://utphax.cyberhax.club" target="_blank">Visit UTPHAX'15</a>
+    &copy; 2016 CyberSOCKS
+    <a class="grey-text text-lighten-4 right" href="{{ site.link.utphax }}" target="_blank">Visit UTPHAX'15</a>
   </div>
 </footer>
