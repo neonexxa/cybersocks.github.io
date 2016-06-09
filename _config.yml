@@ -2,7 +2,7 @@
 title: CyberSOCKS
 description: "Cybersocks Regional Competition 2016"
 url: "https://cybersocks.org"
-admin: "admin@cybersocks.org"
+domain: "cybersocks.org"
 
 # Build settings
 markdown: kramdown
