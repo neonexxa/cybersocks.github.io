@@ -23,7 +23,7 @@
 <!-- QUALS -->
 <ul id="quals" class="dropdown-content">
   {% for quals in site.data.country %}
-  <li><a href="/{{ quals.link }}">{{ quals.name }}</a></li>
+  <li><a href="/{{ quals.name | downcase }}">{{ quals.name }}</a></li>
   {% endfor %}
 </ul>
 

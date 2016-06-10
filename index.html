@@ -22,7 +22,7 @@ permalink: /
 				<h4 id="typing">CyberSOCKS Regional Qualification Rounds</h4>
 				<div class="col s12">
 					{% for country in site.data.country %}
-					<li>{% if country.name != "Malaysia" %}&bull;{% endif %}<a href="{{ country.link }}">&nbsp;&nbsp;{{ country.name }}&nbsp;</a></li>
+					<li>{% if country.name != "Malaysia" %}&bull;{% endif %}<a href="{{ country.name | downcase }}">&nbsp;&nbsp;{{ country.name }}&nbsp;</a></li>
 					{% endfor %}
 					<p>{{ site.date.quals }}</p>
 				</div>

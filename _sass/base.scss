@@ -1,13 +1,9 @@
 /*- Base color -*/
-
-$main-color: #384452; // light black - dark grey
-$secondary-color: #01b2fe; // light blue
-$background-color: #e3e3e3; // silver-ish or can use this bfc9d3
-$text-color: #fff; // white, obviously
-$link-color: #428bca; // light blue - well, pretty dark compared to secondary-color
-$black-color: #000; // obviously black
-
-/* flexbox */
+$main-color: #384452;
+$secondary-color: #01b2fe;
+$background-color: #e3e3e3; // not used
+$text-color: #fff;
+$black-color: #000;
 
 .page-flexbox-wrapper {
   display: flex;
@@ -19,6 +15,9 @@ main {
   flex: 1 0 auto;
 }
 
-.bold {
-  font-weight: bold;
+a {
+  &:hover {
+    color: $main-color;
+    font-weight: bold;
+  }
 }

@@ -1,13 +1,9 @@
 # Country list
 - name: Malaysia
-  link: malaysia
   code: my
 - name: Singapore
-  link: singapore
   code: sg
 - name: Vietnam
-  link: vietnam
   code: vn
 - name: Thailand
-  link: thailand
   code: th

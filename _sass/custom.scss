@@ -8,6 +8,25 @@ nav {
     height: 0.25em;
     background-color: $secondary-color;
   }
+  a:hover {
+    color: $secondary-color;
+  }
+}
+
+.dropdown-content {
+  background-color: $main-color;
+  li {
+    &:hover {
+      background-color: $main-color;
+    }
+    a {
+      color: $text-color;
+      &:hover {
+        color: $secondary-color;
+        background-color: $main-color;
+      }
+    }
+  }
 }
 
 /* Img Focus Zoom */
@@ -54,10 +73,15 @@ footer {
   }
 }
 
-/* Justify */
+/* Custom */
+
 .justify {
   text: {
     align: justify;
     justify: inter-word;
   }
+}
+
+.bold {
+  font-weight: bold;
 }
