@@ -76,3 +76,15 @@ footer {
 .bold {
   font-weight: bold;
 }
+
+.chat-purple { background: #7986cb; color: white; a { color: $black-color; } }
+.chat-blue {
+  background: $secondary-color;
+  a {
+    color: #fff;
+    &:hover {
+      color: $main-color;
+      font-weight: bold;
+    }
+  }
+}

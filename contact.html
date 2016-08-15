@@ -5,15 +5,34 @@ title: Contact
 ---
 {% include wrap.html %}
 <div class="container section row">
-  <div class="col s12">
-    For general question or question related to the regional tournament please contact us at <a href="mailto:hello@{{ site.domain }}">&nbsp;<i class="fa fa-send" aria-hidden="true"></i>&nbsp;hello@{{ site.domain }}</a><br>
-    <p>
-      If you have questions regarding the qualification rounds then please contact one of the organizers below
-      <ul>
-        {% for country in site.data.country %}
-        <li><a href="mailto:{{ country.name | downcase }}@{{ site.domain }}"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;{{ country.name | downcase }}@{{ site.domain }}</a></li>
-        {% endfor %}
-      </ul>
-    </p>
+  <div class="col s12 center">
+    For general question or question related to the regional tournament please contact us at <a href="mailto:hello@{{ site.domain }}">&nbsp;<i class="fa fa-send" aria-hidden="true"></i>&nbsp;hello@{{ site.domain }}</a><br><br>
   </div>
+  <section>
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card-panel chat-blue">
+          If you have questions regarding the qualification rounds then please contact one of the organizers below
+          <ul>
+            {% for country in site.data.country %}
+            <li><a href="mailto:{{ country.name | downcase }}@{{ site.domain }}"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;{{ country.name | downcase }}@{{ site.domain }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="card-panel chat-purple">
+          <span class="white-text">
+            Join our Discord channel now!<br/>
+            Ask question or just come and chat, you're all welcome!<br/>
+          </span>
+          <div class="card-panel white">
+            <span class="black-text">
+              <a class="chat-link" href="https://discord.gg/FdkRdGe">https://discord.gg/FdkRdGe</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
