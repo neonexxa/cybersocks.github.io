@@ -1,8 +1,6 @@
 # Country list
 - name: Malaysia
   code: my
-- name: Singapore
-  code: sg
 - name: Vietnam
   code: vn
 - name: Thailand
