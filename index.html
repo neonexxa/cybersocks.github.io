@@ -7,7 +7,7 @@ permalink: /
 	<!-- Header -->
 	<div class="container section row center">
 		<div class="col s12 m4 offset-m4">
-			<img src="/assets/img/cybersocks_transparent.png" alt="CyberSOCKS" class="responsive-img center" />
+			<img src="/assets/img/cybersocks_transparent.png" alt="CyberSOCKS" class="responsive-img center pad-top" />
 			<hr>
 		</div>
 		<div class="col s12 center flow-text">
@@ -18,7 +18,7 @@ permalink: /
 	<!-- Regional Country list-->
 	<div id="twrap">
 		<div id="twrapcover">
-			<div class="container section row center hoverable">
+			<div class="container-fluid section row center hoverable">
 				<h4 id="typing">CyberSOCKS Regional Qualification Rounds</h4>
 				<div class="col s12">
 					{% for country in site.data.country %}
@@ -31,12 +31,38 @@ permalink: /
 	</div>
 </div>
 
+<!-- Countdown -->
+<div class="bg-clock pad-top">
+	<h5 class="pad-top">REGISTER NOW!</h5>
+	<h6>CyberSOCKS QUALS starts in</h6>
+	<div id="clockdiv">
+		<div class="clock hoverable">
+			<span class="days" id="d"></span>
+			<div class="smalltext">Days</div>
+		</div>
+		<div class="clock hoverable">
+			<span class="hours" id="h"></span>
+			<div class="smalltext">Hours</div>
+		</div>
+		<div class="clock hoverable">
+			<span class="minutes" id="m"></span>
+			<div class="smalltext">Minutes</div>
+		</div>
+		<div class="clock hoverable hide-on-small-only">
+			<span class="seconds" id="s"></span>
+			<div class="smalltext">Seconds</div>
+		</div>
+	</div>
+	<div class="pad-top"></div>
+	<div class="pad-top"></div>
+</div>
+
 <!-- Main Sponsors -->
 <div class="section center row">
-	<h5>CyberSOCKS is brought to you by</h5>
+	<h5 class="pad-top">CyberSOCKS is brought to you by</h5>
 	{% for sponsor in site.data.sponsors %}
 	<div class="col s6 m3">
-		<div class="card-panel hoverable grey lighten-5">
+		<div class="card-panel hoverable blue-grey lighten-5">
 			<a href="{{ sponsor.url }}" target="blank"><img class="responsive-img focus" src="{{ sponsor.base }}" alt="{{ sponsor.name }}" /></a>
 		</div>
 	</div>
