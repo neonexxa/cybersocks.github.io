@@ -58,13 +58,21 @@ permalink: /
 </div>
 
 <!-- Main Sponsors -->
-<div class="section center row">
-	<h5 class="pad-top">CyberSOCKS is brought to you by</h5>
-	{% for sponsor in site.data.sponsors %}
-	<div class="col s6 m3">
-		<div class="card-panel hoverable blue-grey lighten-5">
-			<a href="{{ sponsor.url }}" target="blank"><img class="responsive-img focus" src="{{ sponsor.base }}" alt="{{ sponsor.name }}" /></a>
+<div class="sponsor-bg">
+	<div class="section center row pad-down-large">
+		<h5 class="pad-top pad-down">CyberSOCKS is brought to you by</h5>
+		{% for sponsor in site.data.sponsors %}
+		<div class="col s6 m3">
+			<div class="card-panel hoverable blue-grey lighten-5">
+				<a href="{{ sponsor.url }}" target="blank"><img class="responsive-img focus" src="{{ sponsor.base }}" alt="{{ sponsor.name }}" /></a>
+			</div>
 		</div>
+		{% endfor %}
 	</div>
-	{% endfor %}
+</div>
+
+<div class="container section row center">
+	<div class="col s4 offset-s4">
+		<a href="http://tourismperakmalaysia.com/" target="_blank"><img src="/assets/img/tourism-perak-logo.png" alt="Tourism Perak 2017" class="responsive-img" /></a>
+	</div>
 </div>
