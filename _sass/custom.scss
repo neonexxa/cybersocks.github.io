@@ -1,7 +1,10 @@
 /* Navigation bar */
 
-nav a:hover {
-  color: $secondary-color;
+nav {
+  font-family: 'Open Sans', sans-serif;
+  a:hover {
+    color: $secondary-color;
+  }
 }
 
 .dropdown-content {
@@ -12,6 +15,8 @@ nav a:hover {
     }
     a {
       color: $text-color;
+      font-size: 0.9em;
+      text-align: center;
       &:hover {
         color: $secondary-color;
         background-color: $main-color;
