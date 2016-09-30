@@ -9,7 +9,7 @@ markdown: kramdown
 permalink: /:title
 
 # Custom variables
-version: "2.2"
+version: "2.3"
 timezone: Asia/Kuala_Lumpur
 kramdown:
   input: GFM
