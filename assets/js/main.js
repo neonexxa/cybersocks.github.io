@@ -24,6 +24,21 @@ $('.dropdown-button').dropdown({
 
 $('.modal-trigger').leanModal();
 
+var urlmal = 'https://content-sheets.googleapis.com/v4/spreadsheets/1AczEQxn_ATfnfEtAbJMqVigLNse4XIyRtvQ7JG53G74/values/Z3?key=AIzaSyDOxT5BRuC3_JurGwubSc7buJe25nf3itg';
+
+$.get(urlmal,null,function(data){
+	var my = new CountUp("Malaysia", 0, parseInt(data.values[0]), 0, 5, options);
+	my.start();
+});
+
+var urlvn = 'https://content-sheets.googleapis.com/v4/spreadsheets/19ez3FZTNNGgNESSnTqpPobNyfbdWg8Gz5d8Q6J8XbQ4/values/Z3?key=AIzaSyDOxT5BRuC3_JurGwubSc7buJe25nf3itg';
+
+$.get(urlvn,null,function(data){
+	var vn = new CountUp("Vietnam", 0, parseInt(data.values[0]), 0, 5, options);
+	vn.start();
+});
+
+
 var options = {
   useEasing : true,
   useGrouping : true,
@@ -32,9 +47,6 @@ var options = {
   prefix : '',
   suffix : ''
 };
-var my = new CountUp("Malaysia", 0, 26, 0, 5, options);
-var vn = new CountUp("Vietnam", 0, 14, 0, 5, options);
 var tl = new CountUp("Thailand", 0, 0, 0, 5, options);
-my.start();
-vn.start();
+
 tl.start();
