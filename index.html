@@ -31,10 +31,23 @@ permalink: /
 	</div>
 </div>
 
+<div class="chat-blue">
+	<div class="row row0 pad-center center">
+		<h5 class="focus">REGISTER NOW! <i class="fa fa-user-plus" aria-hidden="true"></i></h5>
+		<h6>Number of Participating Teams to-date</h6>
+	</div>
+</div>
+<div class="row row0 pad-center center">
+	{% for country in site.data.country %}
+	<div class="col s4">
+		<div id="{{ country.name }}">0</div><br><a href="{{ country.name | downcase }}">{{ country.name }}</a>
+	</div>
+	{% endfor %}
+</div>
+
 <!-- Countdown -->
 <div class="bg-clock pad-top">
-	<h5 class="pad-top">REGISTER NOW!</h5>
-	<h6>CyberSOCKS QUALS starts in</h6>
+	<h6>CyberSOCKS QUALS starts in</h6><br>
 	<div id="clockdiv">
 		<div class="clock hoverable">
 			<span class="days" id="d"></span>
@@ -71,7 +84,7 @@ permalink: /
 	</div>
 </div>
 
-<div class="container section row center">
+<div class="container section row row0 center">
 	<div class="col s4 offset-s4">
 		<a href="http://tourismperakmalaysia.com/" target="_blank"><img src="/assets/img/tourism-perak-logo.png" alt="Tourism Perak 2017" class="responsive-img" /></a>
 	</div>
