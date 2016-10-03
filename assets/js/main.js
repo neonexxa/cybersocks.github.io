@@ -40,14 +40,14 @@ $.get(urlmal,null,function(data){
 	my.start();
 });
 
-var urlvn = 'https://content-sheets.googleapis.com/v4/spreadsheets/1e4PUG314-Qs8fwal3vM_LHzsty8PdDXTa6A2N-KT70M/values/B2?key=AIzaSyDOxT5BRuC3_JurGwubSc7buJe25nf3itg';
+var urlvn = 'https://content-sheets.googleapis.com/v4/spreadsheets/1e4PUG314-Qs8fwal3vM_LHzsty8PdDXTa6A2N-KT70M/values/A2?key=AIzaSyDOxT5BRuC3_JurGwubSc7buJe25nf3itg';
 
 $.get(urlvn,null,function(data){
 	var vn = new CountUp("Vietnam", 0, parseInt(data.values[0]), 0, 5, options);
 	vn.start();
 });
 
-var urltl = 'https://content-sheets.googleapis.com/v4/spreadsheets/13xJH-B9_ewTK2644QlJ5tKSiDCZHww0tvB3a7eLFVQs/values/C2?key=AIzaSyDOxT5BRuC3_JurGwubSc7buJe25nf3itg';
+var urltl = 'https://content-sheets.googleapis.com/v4/spreadsheets/13xJH-B9_ewTK2644QlJ5tKSiDCZHww0tvB3a7eLFVQs/values/A2?key=AIzaSyDOxT5BRuC3_JurGwubSc7buJe25nf3itg';
 
 $.get(urltl,null,function(data){
 	var tl = new CountUp("Thailand", 0, parseInt(data.values[0]), 0, 5, options);
