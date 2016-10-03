@@ -33,14 +33,14 @@ var options = {
   suffix : ''
 };
 
-var urlmal = 'https://content-sheets.googleapis.com/v4/spreadsheets/13xJH-B9_ewTK2644QlJ5tKSiDCZHww0tvB3a7eLFVQs/values/A2?key=AIzaSyDOxT5BRuC3_JurGwubSc7buJe25nf3itg';
+var urlmal = 'https://content-sheets.googleapis.com/v4/spreadsheets/1VpqnS5dtsEmUpg-GEsccJ8yq77m1Jv_ydKIRQGSRGiQ/values/A2?key=AIzaSyDOxT5BRuC3_JurGwubSc7buJe25nf3itg';
 
 $.get(urlmal,null,function(data){
 	var my = new CountUp("Malaysia", 0, parseInt(data.values[0]), 0, 5, options);
 	my.start();
 });
 
-var urlvn = 'https://content-sheets.googleapis.com/v4/spreadsheets/13xJH-B9_ewTK2644QlJ5tKSiDCZHww0tvB3a7eLFVQs/values/B2?key=AIzaSyDOxT5BRuC3_JurGwubSc7buJe25nf3itg';
+var urlvn = 'https://content-sheets.googleapis.com/v4/spreadsheets/1e4PUG314-Qs8fwal3vM_LHzsty8PdDXTa6A2N-KT70M/values/B2?key=AIzaSyDOxT5BRuC3_JurGwubSc7buJe25nf3itg';
 
 $.get(urlvn,null,function(data){
 	var vn = new CountUp("Vietnam", 0, parseInt(data.values[0]), 0, 5, options);
