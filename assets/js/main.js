@@ -24,21 +24,6 @@ $('.dropdown-button').dropdown({
 
 $('.modal-trigger').leanModal();
 
-var urlmal = 'https://content-sheets.googleapis.com/v4/spreadsheets/1AczEQxn_ATfnfEtAbJMqVigLNse4XIyRtvQ7JG53G74/values/Z3?key=AIzaSyDOxT5BRuC3_JurGwubSc7buJe25nf3itg';
-
-$.get(urlmal,null,function(data){
-	var my = new CountUp("Malaysia", 0, parseInt(data.values[0]), 0, 5, options);
-	my.start();
-});
-
-var urlvn = 'https://content-sheets.googleapis.com/v4/spreadsheets/19ez3FZTNNGgNESSnTqpPobNyfbdWg8Gz5d8Q6J8XbQ4/values/Z3?key=AIzaSyDOxT5BRuC3_JurGwubSc7buJe25nf3itg';
-
-$.get(urlvn,null,function(data){
-	var vn = new CountUp("Vietnam", 0, parseInt(data.values[0]), 0, 5, options);
-	vn.start();
-});
-
-
 var options = {
   useEasing : true,
   useGrouping : true,
@@ -47,6 +32,24 @@ var options = {
   prefix : '',
   suffix : ''
 };
-var tl = new CountUp("Thailand", 0, 0, 0, 5, options);
 
-tl.start();
+var urlmal = 'https://content-sheets.googleapis.com/v4/spreadsheets/13xJH-B9_ewTK2644QlJ5tKSiDCZHww0tvB3a7eLFVQs/values/A2?key=AIzaSyDOxT5BRuC3_JurGwubSc7buJe25nf3itg';
+
+$.get(urlmal,null,function(data){
+	var my = new CountUp("Malaysia", 0, parseInt(data.values[0]), 0, 5, options);
+	my.start();
+});
+
+var urlvn = 'https://content-sheets.googleapis.com/v4/spreadsheets/13xJH-B9_ewTK2644QlJ5tKSiDCZHww0tvB3a7eLFVQs/values/B2?key=AIzaSyDOxT5BRuC3_JurGwubSc7buJe25nf3itg';
+
+$.get(urlvn,null,function(data){
+	var vn = new CountUp("Vietnam", 0, parseInt(data.values[0]), 0, 5, options);
+	vn.start();
+});
+
+var urltl = 'https://content-sheets.googleapis.com/v4/spreadsheets/13xJH-B9_ewTK2644QlJ5tKSiDCZHww0tvB3a7eLFVQs/values/C2?key=AIzaSyDOxT5BRuC3_JurGwubSc7buJe25nf3itg';
+
+$.get(urltl,null,function(data){
+	var tl = new CountUp("Thailand", 0, parseInt(data.values[0]), 0, 5, options);
+	tl.start();
+});
