@@ -15,17 +15,43 @@ permalink: /
 			<h6>{% include location.html %}&nbsp;&nbsp;Kuala Lumpur, Malaysia on {{ site.date.regional }}</h6>
 		</div>
 	</div>
-	<!-- Regional Country list-->
-	<div id="twrap">
-		<div id="twrapcover">
-			<div class="container-fluid section row center hoverable">
-				<h4 id="typing">CyberSOCKS Regional Qualification Rounds</h4>
-				<div class="col s12">
-					{% for country in site.data.country %}
-					<li>{% if country.name != "Malaysia" %}&bull;{% endif %}<a href="{{ country.name | downcase }}">&nbsp;&nbsp;{{ country.name }}&nbsp;</a></li>
-					{% endfor %}
-					<p>{{ site.date.quals }}</p>
-				</div>
+
+	<!-- Countdown -->
+	<div class="bg-clock pad-top">
+		<h6>CyberSOCKS starts in</h6><br>
+		<div id="clockdiv">
+			<div class="clock hoverable">
+				<span class="days" id="d"></span>
+				<div class="smalltext">Days</div>
+			</div>
+			<div class="clock hoverable">
+				<span class="hours" id="h"></span>
+				<div class="smalltext">Hours</div>
+			</div>
+			<div class="clock hoverable">
+				<span class="minutes" id="m"></span>
+				<div class="smalltext">Minutes</div>
+			</div>
+			<div class="clock hoverable hide-on-small-only">
+				<span class="seconds" id="s"></span>
+				<div class="smalltext">Seconds</div>
+			</div>
+		</div>
+		<div class="pad-top"></div>
+		<div class="pad-top"></div>
+	</div>
+</div>
+
+<!-- Regional Country list-->
+<div id="twrap">
+	<div id="twrapcover">
+		<div class="container-fluid section row center">
+			<h4 id="typing">CyberSOCKS Regional Qualification Rounds</h4>
+			<div class="col s12">
+				{% for country in site.data.country %}
+				<li>{% if country.name != "Malaysia" %}&bull;{% endif %}<a href="{{ country.name | downcase }}">&nbsp;&nbsp;{{ country.name }}&nbsp;</a></li>
+				{% endfor %}
+				<p>{{ site.date.quals }}</p>
 			</div>
 		</div>
 	</div>
@@ -33,41 +59,23 @@ permalink: /
 
 <div class="cyan lighten-3">
 	<div class="row row0 pad-center center">
-		<h5 class="focus">REGISTER NOW! <i class="fa fa-user-plus" aria-hidden="true"></i></h5>
-		<h6>Number of Participating Teams to-date</h6>
+		<br>
+		<div class="col s12 m6">
+			<h5 class="focus">Participating Teams <i class="fa fa-bar-chart" aria-hidden="true"></i></h5>
+			<h6>in the CyberSOCKS Qualification Rounds</h6>
+		</div>
+		<div class="col s12 hide-on-med-and-up">
+			<br>
+		</div>
+		{% for country in site.data.country %}
+		<div class="col s6 m3">
+			<div id="{{ country.name }}">fetching data...</div><br><div class="chip">
+				<a href="{{ country.name | downcase }}">{{ country.name }}</a>
+			</div>
+		</div>
+		{% endfor %}
 	</div>
-</div>
-<div class="row row0 pad-center center">
-	{% for country in site.data.country %}
-	<div class="col s4">
-		<div id="{{ country.name }}">fetching data...</div><br><a href="{{ country.name | downcase }}">{{ country.name }}</a>
-	</div>
-	{% endfor %}
-</div>
-
-<!-- Countdown -->
-<div class="bg-clock pad-top">
-	<h6>CyberSOCKS QUALS starts in</h6><br>
-	<div id="clockdiv">
-		<div class="clock hoverable">
-			<span class="days" id="d"></span>
-			<div class="smalltext">Days</div>
-		</div>
-		<div class="clock hoverable">
-			<span class="hours" id="h"></span>
-			<div class="smalltext">Hours</div>
-		</div>
-		<div class="clock hoverable">
-			<span class="minutes" id="m"></span>
-			<div class="smalltext">Minutes</div>
-		</div>
-		<div class="clock hoverable hide-on-small-only">
-			<span class="seconds" id="s"></span>
-			<div class="smalltext">Seconds</div>
-		</div>
-	</div>
-	<div class="pad-top"></div>
-	<div class="pad-top"></div>
+	<br>
 </div>
 
 <!-- Main Sponsors -->
@@ -108,7 +116,7 @@ function getTimeRemaining(endtime) {
 var now = new Date();
 var current_year = now.getFullYear();
 var next_year = current_year + 1;
-var target_date = new Date("Oct 22, 2016 10:00:00 GMT+0800").getTime();
+var target_date = new Date("Dec 9, 2016 10:00:00 GMT+0800").getTime();
 var days, hours, minutes, seconds;
 var $days = document.getElementById("d");
 var $hours = document.getElementById("h");
