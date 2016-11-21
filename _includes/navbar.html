@@ -20,14 +20,12 @@
   </nav>
 </div>
 
-<!-- QUALS -->
 <ul id="quals" class="dropdown-content">
   {% for quals in site.data.country %}
   <li><a href="/{{ quals.name | downcase }}">{{ quals.name }}</a></li>
   {% endfor %}
 </ul>
 
-<!-- RESOURCE -->
 <ul id="resc" class="dropdown-content">
   {% for res in site.data.resources %}
   <li><a href="/resources#{{ res.id }}">{{ res.name }}</a></li>
