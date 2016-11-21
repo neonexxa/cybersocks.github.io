@@ -1,5 +1,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/3.0.1/typeit.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.7.1/countUp.min.js"></script>
 <script type="text/javascript">
@@ -25,7 +25,7 @@ $('.dropdown-button').dropdown({
   belowOrigin: true,
   alignment: 'left'
 });
-$('.modal-trigger').leanModal();
+$('.modal').modal();
 </script>
 {% if page.permalink == "/" %}
 <script type="text/javascript">
@@ -48,12 +48,6 @@ var urlvn = 'https://content-sheets.googleapis.com/v4/spreadsheets/1e4PUG314-Qs8
 $.get(urlvn,null,function(data){
   var vn = new CountUp("Vietnam", 0, parseInt(data.values[0]), 0, 5, options);
   vn.start();
-});
-
-var urltl = 'https://content-sheets.googleapis.com/v4/spreadsheets/13xJH-B9_ewTK2644QlJ5tKSiDCZHww0tvB3a7eLFVQs/values/A2?key=AIzaSyDOxT5BRuC3_JurGwubSc7buJe25nf3itg';
-$.get(urltl,null,function(data){
-  var tl = new CountUp("Thailand", 0, parseInt(data.values[0]), 0, 5, options);
-  tl.start();
 });
 </script>
 {% endif %}
