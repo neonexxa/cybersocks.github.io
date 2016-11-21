@@ -10,19 +10,19 @@ permalink: /
 			<img src="/assets/img/cybersocks_transparent.png" alt="CyberSOCKS" class="responsive-img center pad-top" />
 			<hr>
 		</div>
-		<div class="col s12 center flow-text">
+		<div class="col s12 center">
 			<h3>CyberSOCKS Regional</h3>
-			<h6>{% include location.html %}&nbsp;&nbsp;Kuala Lumpur, Malaysia on {{ site.date.regional }}</h6>
+			<h6>{% include location.html %}&nbsp;&nbsp;Casuarina @ Meru, Ipoh, Perak, Malaysia on <span class="blue-text">{{ site.date.regional }}</span></h6>
 		</div>
 	</div>
 
 	<!-- Countdown -->
 	<div class="bg-clock pad-top">
-		<h6>CyberSOCKS starts in</h6><br>
+		<h5 id="typing" class="flow-text">Regional competition final round starts in...</h5><br>
 		<div id="clockdiv">
 			<div class="clock hoverable">
 				<span class="days" id="d"></span>
-				<div class="smalltext">Days</div>
+				<div class="smalltext"><i class="fa fa-clock-o" aria-hidden="true"></i> Days</div>
 			</div>
 			<div class="clock hoverable">
 				<span class="hours" id="h"></span>
@@ -42,11 +42,36 @@ permalink: /
 	</div>
 </div>
 
+<!-- FINAL Participating Teams -->
+<div class="bg-clock">
+	<div class="row row0 pad-center center">
+		<br>
+		<div class="col s12">
+			<h5 class="focus">Competing Teams <i class="fa fa-bar-chart" aria-hidden="true"></i></h5>
+			<h6>in the CyberSOCKS Final Round</h6>
+		</div>
+		<div class="col s12"><br></div>
+		{% for team in site.data.final %}
+			<div class="col s6 m3">
+				<div class="card-panel white team">
+					{{ team.name }}
+					<a onclick="Materialize.toast('{{ team.university }}', 5000)"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+					<div class="chip pull-right hide-on-small-only" title="{{ team.country | capitalize }}">
+						<img src="/assets/img/{{ team.country }}.png" alt="{{ team.country }}">
+						{% if team.rank != 0 %} Rank {{ team.rank }} {% else %} Invitation {% endif %}
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	<br>
+</div>
+
 <!-- Regional Country list-->
 <div id="twrap">
 	<div id="twrapcover">
 		<div class="container-fluid section row center">
-			<h4 id="typing">CyberSOCKS Regional Qualification Rounds</h4>
+			<h4 id="typing" class="flow-text">CyberSOCKS Qualification Rounds</h4>
 			<div class="col s12">
 				{% for country in site.data.country %}
 				<li>{% if country.name != "Malaysia" %}&bull;{% endif %}<a href="{{ country.name | downcase }}">&nbsp;&nbsp;{{ country.name }}&nbsp;</a></li>
@@ -57,7 +82,8 @@ permalink: /
 	</div>
 </div>
 
-<div class="cyan lighten-3">
+<!-- QUALS Participating Teams -->
+<div class="grey lighten-1">
 	<div class="row row0 pad-center center">
 		<br>
 		<div class="col s12 m6">
@@ -69,7 +95,8 @@ permalink: /
 		</div>
 		{% for country in site.data.country %}
 		<div class="col s6 m3">
-			<div id="{{ country.name }}">fetching data...</div><br><div class="chip">
+			<div id="{{ country.name }}">fetching data...</div><br>
+			<div class="chip">
 				<a href="{{ country.name | downcase }}">{{ country.name }}</a>
 			</div>
 		</div>
@@ -116,7 +143,7 @@ function getTimeRemaining(endtime) {
 var now = new Date();
 var current_year = now.getFullYear();
 var next_year = current_year + 1;
-var target_date = new Date("Dec 9, 2016 10:00:00 GMT+0800").getTime();
+var target_date = new Date("Dec 10, 2016 10:00:00 GMT+0800").getTime();
 var days, hours, minutes, seconds;
 var $days = document.getElementById("d");
 var $hours = document.getElementById("h");
