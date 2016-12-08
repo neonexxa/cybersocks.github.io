@@ -112,3 +112,15 @@ footer {
 
 .tabs .indicator { background-color: $secondary-color; }
 .team { text-align: left; }
+
+.info {
+  padding: 25px 0 !important;
+}
+.info-link {
+  a {
+    color: $main-color;
+    :hover {
+      color: #757575;
+    }
+  }
+}

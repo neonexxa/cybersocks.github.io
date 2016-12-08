@@ -42,6 +42,19 @@ permalink: /
 	</div>
 </div>
 
+<!-- More Information -->
+<div class="row row0 info-link">
+	{% for info in site.data.resources %}
+		{% if info.id != "committee" %}
+		<a href="/resources">
+			<div class="col s3 center info {{ info.color }}">
+				<i class="material-icons">{{ info.icon }}</i><br>{{ info.name }}
+			</div>
+		</a>
+		{% endif %}
+	{% endfor %}
+</div>
+
 <!-- FINAL Participating Teams -->
 <div class="bg-clock">
 	<div class="row row0 pad-center center">
@@ -56,7 +69,7 @@ permalink: /
 				<div class="card-panel white team">
 					{{ team.name }}
 					<a onclick="Materialize.toast('{{ team.university }}', 5000)"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-					<div class="chip pull-right hide-on-small-only" title="{{ team.country | capitalize }}">
+					<div class="chip pull-right hide-on-med-and-down" title="{{ team.country | capitalize }}">
 						<img src="/assets/img/{{ team.country }}.png" alt="{{ team.country }}">
 						{% if team.rank != 0 %} Rank {{ team.rank }} {% else %} Invitation {% endif %}
 					</div>

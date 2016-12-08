@@ -1,6 +1,6 @@
-name,id,icon
-Rules,rules,announcement
-Programme,programme,schedule
-Accommodation,accommodation,hotel
-Prize,prize,card_giftcard
-Committee,committee,people
+name,id,icon,color
+Rules,rules,announcement,orange lighten-1
+Programme,programme,schedule,yellow lighten-2
+Accommodation,accommodation,hotel,orange lighten-1
+Prize,prize,card_giftcard,yellow lighten-2
+Committee,committee,people,orange lighten-1
