@@ -1,4 +1,6 @@
-name,id
-Rules,rules
-Programme,programme
-Committee,committee
+name,id,icon
+Rules,rules,announcement
+Programme,programme,schedule
+Accommodation,accommodation,hotel
+Prize,prize,card_giftcard
+Committee,committee,people

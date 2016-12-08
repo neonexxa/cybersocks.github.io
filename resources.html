@@ -5,16 +5,14 @@ permalink: /resources/
 ---
 {% include wrap.html %}
 <div class="section row">
-  <!-- tabs -->
-  <div class="col s12">
-    <ul class="tabs">
-      {% for tab in site.data.resources %}
-      <li class="tab col s3"><a class="black-text" href="#{{ tab.id }}">{{ tab.name }}</a></li>
+  <div class="col s10 offset-s1">
+    <ul class="collapsible popout" data-collapsible="expandable">
+      {% for res in site.data.resources %}
+      <li>
+        <div class="collapsible-header{% if res.id == "programme" %} active{% endif %}"><i class="material-icons">{{ res.icon }}</i>{{ res.name }}</div>
+        <div class="collapsible-body"><p>{% include res_{{ res.id }}.html %}</p></div>
+      </li>
       {% endfor %}
     </ul>
   </div>
-  <!-- content -->
-  {% for res in site.data.resources %}
-  <div id="{{ res.id }}" class="col s12">{% include res_{{ res.id }}.html %}</div>
-  {% endfor %}
 </div>

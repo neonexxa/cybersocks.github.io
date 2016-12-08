@@ -9,7 +9,7 @@ markdown: kramdown
 permalink: /:title
 
 # Custom variables
-version: "2.3.1"
+version: "2.3.2"
 timezone: Asia/Kuala_Lumpur
 kramdown:
   input: GFM
@@ -23,6 +23,7 @@ sass:
   style: compressed
 
 # Data
+location: Casuarina @ Meru, Ipoh, Perak, Malaysia
 date:
   quals: 22nd – 23rd October 2016
   regional: 10th December 2016
